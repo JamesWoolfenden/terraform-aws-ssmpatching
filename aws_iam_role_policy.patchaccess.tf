@@ -1,6 +1,6 @@
 resource "aws_iam_role_policy" "patchaccess" {
   name = "patchaccess"
-  role = "${aws_iam_role.patchaccess.id}"
+  role = aws_iam_role.patchaccess.id
 
   policy = <<EOF
 {
