@@ -1,14 +1,14 @@
 variable "patchgroup" {
-    type=string
+  type        = string
   description = ""
 }
 
 variable "patchbaseline_arn_id" {
-    type=string
+  type        = string
   description = ""
 }
 
 variable "cron" {
-  type=string
+  type        = string
   description = ""
 }
