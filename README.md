@@ -14,8 +14,8 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
   ```hcl
   module "ssmpatching" {
   source      = "JamesWoolfenden/ssmpatching/aws"
-  version     = "0.0.4"
-  common_tags = "${var.common_tags}"
+  version     = "0.1.4"
+  common_tags = var.common_tags
   }
   ```
 
