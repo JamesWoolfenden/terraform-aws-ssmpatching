@@ -13,7 +13,7 @@ resource "aws_ssm_maintenance_window_task" "task" {
   }
 
   task_parameters {
-    name   = "commands"
-    values = ["yum update -y; reboot"]
+    name   = var.task["name"]
+    values = var.task["values"]
   }
 }

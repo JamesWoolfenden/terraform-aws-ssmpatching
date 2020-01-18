@@ -4,6 +4,7 @@
 # terraform-aws-ssmpatching [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssmpatching.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssmpatching) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssmpatching.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssmpatching/releases/latest)
 
 Terraform module to provision SSM scheme.
+Sets up task and patch window to apply to instances tagged with PatchGroup Key and a set value.
 
 ---
 
@@ -13,9 +14,13 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
   ```hcl
   module "ssmpatching" {
-  source      = "JamesWoolfenden/ssmpatching/aws"
-  version     = "0.1.4"
-  common_tags = var.common_tags
+     source               = "JamesWoolfenden/ssmpatching/aws"
+     version              = "0.1.7"
+     common_tags          = var.common_tags
+     patchbaseline_arn_id = var.patchbaseline_arn_id
+     patchgroup           = var.patchgroup
+     cron                 = var.cron
+     task                 = var.task
   }
   ```
 
@@ -24,9 +29,19 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| cron |  | string | n/a | yes |
-| patchbaseline\_arn\_id |  | string | n/a | yes |
-| patchgroup |  | string | n/a | yes |
+| cron | The Cron statement to control the patch schedule | string | n/a | yes |
+| patchbaseline\_arn\_id | This is an AWS variable that describe the patch baseline | string | n/a | yes |
+| patchgroup | A named group of servers to apply tasks to | string | n/a | yes |
+| task | Contains the task details and command | map | `<map>` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| maintenance\_window |  |
+| patchgroup |  |
+| task |  |
+| window\_target |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Related Projects
@@ -49,7 +64,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 
 ## License
 
