@@ -1,7 +1,12 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-ssmpatching [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssmpatching.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssmpatching) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssmpatching.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssmpatching/releases/latest)
+# terraform-aws-ssmpatching 
+
+![Verify and Bump](https://github.com/JamesWoolfenden/terraform-aws-ssmpatching/workflows/Verify%20and%20Bump/badge.svg)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssmpatching.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssmpatching/releases/latest)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 Terraform module to provision SSM scheme.
 Sets up task and patch window to apply to instances tagged with PatchGroup Key and a set value.
@@ -93,9 +98,8 @@ under the License.
 
   [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
 
-  [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
-  [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
