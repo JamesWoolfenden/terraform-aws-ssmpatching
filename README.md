@@ -30,24 +30,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
   ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| cron | The Cron statement to control the patch schedule | string | n/a | yes |
-| patchbaseline\_arn\_id | This is an AWS variable that describe the patch baseline | string | n/a | yes |
-| patchgroup | A named group of servers to apply tasks to | string | n/a | yes |
-| task | Contains the task details and command | map | `<map>` | no |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| maintenance\_window |  |
-| patchgroup |  |
-| task |  |
-| window\_target |  |
-
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Related Projects
 
