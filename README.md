@@ -6,7 +6,7 @@
 ![Verify and Bump](https://github.com/JamesWoolfenden/terraform-aws-ssmpatching/workflows/Verify%20and%20Bump/badge.svg)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssmpatching.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssmpatching/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 Terraform module to provision SSM scheme.
 Sets up task and patch window to apply to instances tagged with PatchGroup Key and a set value.
@@ -30,7 +30,34 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
   ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-Error: no lines in file
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| cron | The Cron statement to control the patch schedule | `string` | n/a | yes |
+| patchbaseline\_arn\_id | This is an AWS variable that describe the patch baseline | `string` | n/a | yes |
+| patchgroup | A named group of servers to apply tasks to | `string` | n/a | yes |
+| task | Contains the task details and command | `map` | <pre>{<br>  "name": "commands",<br>  "values": [<br>    "yum update -y; reboot"<br>  ]<br>}</pre> | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| maintenance\_window | n/a |
+| patchgroup | n/a |
+| task | n/a |
+| window\_target | n/a |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Related Projects
 
