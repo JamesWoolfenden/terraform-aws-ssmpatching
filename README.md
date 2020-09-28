@@ -27,7 +27,6 @@ module "ssmpatching" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -35,26 +34,26 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                 | Description                                              | Type     | Default                                                                                     | Required |
-| -------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------- | :------: |
-| cron                 | The Cron statement to control the patch schedule         | `string` | n/a                                                                                         |   yes    |
-| patchbaseline_arn_id | This is an AWS variable that describe the patch baseline | `string` | n/a                                                                                         |   yes    |
-| patchgroup           | A named group of servers to apply tasks to               | `string` | n/a                                                                                         |   yes    |
-| task                 | Contains the task details and command                    | `map`    | <pre>{<br> "name": "commands",<br> "values": [<br> "yum update -y; reboot"<br> ]<br>}</pre> |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| cron | The Cron statement to control the patch schedule | `string` | n/a | yes |
+| patchbaseline\_arn\_id | This is an AWS variable that describe the patch baseline | `string` | n/a | yes |
+| patchgroup | A named group of servers to apply tasks to | `string` | n/a | yes |
+| task | Contains the task details and command | `map` | <pre>{<br>  "name": "commands",<br>  "values": [<br>    "yum update -y; reboot"<br>  ]<br>}</pre> | no |
 
 ## Outputs
 
-| Name               | Description |
-| ------------------ | ----------- |
-| maintenance_window | n/a         |
-| patchgroup         | n/a         |
-| task               | n/a         |
-| window_target      | n/a         |
+| Name | Description |
+|------|-------------|
+| maintenance\_window | n/a |
+| patchgroup | n/a |
+| task | n/a |
+| window\_target | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
