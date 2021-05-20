@@ -39,40 +39,40 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) |
-| [aws_iam_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) |
-| [aws_ssm_maintenance_window](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window) |
-| [aws_ssm_maintenance_window_target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window_target) |
-| [aws_ssm_maintenance_window_task](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window_task) |
-| [aws_ssm_patch_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_patch_group) |
+| Name | Type |
+|------|------|
+| [aws_iam_role.patchaccess](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy.patchaccess](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [aws_ssm_maintenance_window.production](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window) | resource |
+| [aws_ssm_maintenance_window_target.target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window_target) | resource |
+| [aws_ssm_maintenance_window_task.task](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window_task) | resource |
+| [aws_ssm_patch_group.patchgroup](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_patch_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| cron | The Cron statement to control the patch schedule | `string` | n/a | yes |
-| patchbaseline\_arn\_id | This is an AWS variable that describe the patch baseline | `string` | n/a | yes |
-| patchgroup | A named group of servers to apply tasks to | `string` | n/a | yes |
-| task | Contains the task details and command | `map` | <pre>{<br>  "name": "commands",<br>  "values": [<br>    "yum update -y; reboot"<br>  ]<br>}</pre> | no |
+| <a name="input_cron"></a> [cron](#input\_cron) | The Cron statement to control the patch schedule | `string` | n/a | yes |
+| <a name="input_patchbaseline_arn_id"></a> [patchbaseline\_arn\_id](#input\_patchbaseline\_arn\_id) | This is an AWS variable that describe the patch baseline | `string` | n/a | yes |
+| <a name="input_patchgroup"></a> [patchgroup](#input\_patchgroup) | A named group of servers to apply tasks to | `string` | n/a | yes |
+| <a name="input_task"></a> [task](#input\_task) | Contains the task details and command | `map` | <pre>{<br>  "name": "commands",<br>  "values": [<br>    "yum update -y; reboot"<br>  ]<br>}</pre> | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| maintenance\_window | n/a |
-| patchgroup | n/a |
-| task | n/a |
-| window\_target | n/a |
+| <a name="output_maintenance_window"></a> [maintenance\_window](#output\_maintenance\_window) | n/a |
+| <a name="output_patchgroup"></a> [patchgroup](#output\_patchgroup) | n/a |
+| <a name="output_task"></a> [task](#output\_task) | n/a |
+| <a name="output_window_target"></a> [window\_target](#output\_window\_target) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
