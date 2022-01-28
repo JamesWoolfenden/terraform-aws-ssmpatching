@@ -31,15 +31,16 @@ module "ssmpatching" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
 
 ## Modules
 
@@ -47,32 +48,33 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_iam_role.patchaccess](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy.patchaccess](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
-| [aws_ssm_maintenance_window.production](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window) | resource |
+| Name                                                                                                                                                  | Type     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [aws_iam_role.patchaccess](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                                      | resource |
+| [aws_iam_role_policy.patchaccess](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)                        | resource |
+| [aws_ssm_maintenance_window.production](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window)           | resource |
 | [aws_ssm_maintenance_window_target.target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window_target) | resource |
-| [aws_ssm_maintenance_window_task.task](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window_task) | resource |
-| [aws_ssm_patch_group.patchgroup](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_patch_group) | resource |
+| [aws_ssm_maintenance_window_task.task](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_maintenance_window_task)       | resource |
+| [aws_ssm_patch_group.patchgroup](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_patch_group)                         | resource |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_cron"></a> [cron](#input\_cron) | The Cron statement to control the patch schedule | `string` | n/a | yes |
-| <a name="input_patchbaseline_arn_id"></a> [patchbaseline\_arn\_id](#input\_patchbaseline\_arn\_id) | This is an AWS variable that describe the patch baseline | `string` | n/a | yes |
-| <a name="input_patchgroup"></a> [patchgroup](#input\_patchgroup) | A named group of servers to apply tasks to | `string` | n/a | yes |
-| <a name="input_task"></a> [task](#input\_task) | Contains the task details and command | `map` | <pre>{<br>  "name": "commands",<br>  "values": [<br>    "yum update -y; reboot"<br>  ]<br>}</pre> | no |
+| Name                                                                                          | Description                                              | Type     | Default                                                                                     | Required |
+| --------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------- | :------: |
+| <a name="input_cron"></a> [cron](#input_cron)                                                 | The Cron statement to control the patch schedule         | `string` | n/a                                                                                         |   yes    |
+| <a name="input_patchbaseline_arn_id"></a> [patchbaseline_arn_id](#input_patchbaseline_arn_id) | This is an AWS variable that describe the patch baseline | `string` | n/a                                                                                         |   yes    |
+| <a name="input_patchgroup"></a> [patchgroup](#input_patchgroup)                               | A named group of servers to apply tasks to               | `string` | n/a                                                                                         |   yes    |
+| <a name="input_task"></a> [task](#input_task)                                                 | Contains the task details and command                    | `map`    | <pre>{<br> "name": "commands",<br> "values": [<br> "yum update -y; reboot"<br> ]<br>}</pre> |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_maintenance_window"></a> [maintenance\_window](#output\_maintenance\_window) | n/a |
-| <a name="output_patchgroup"></a> [patchgroup](#output\_patchgroup) | n/a |
-| <a name="output_task"></a> [task](#output\_task) | n/a |
-| <a name="output_window_target"></a> [window\_target](#output\_window\_target) | n/a |
+| Name                                                                                      | Description |
+| ----------------------------------------------------------------------------------------- | ----------- |
+| <a name="output_maintenance_window"></a> [maintenance_window](#output_maintenance_window) | n/a         |
+| <a name="output_patchgroup"></a> [patchgroup](#output_patchgroup)                         | n/a         |
+| <a name="output_task"></a> [task](#output_task)                                           | n/a         |
+| <a name="output_window_target"></a> [window_target](#output_window_target)                | n/a         |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
@@ -95,7 +97,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2019-2022 James Woolfenden
 
 ## License
 
