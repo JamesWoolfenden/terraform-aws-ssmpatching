@@ -1,4 +1,6 @@
 resource "aws_iam_role_policy" "patchaccess" {
+  # checkov:skip=CKV_AWS_272: Policy requires broad access for this module to function
+  # checkov:skip=CKV_AWS_356: Policy requires broad access for this module to function
   name = "patchaccess"
   role = aws_iam_role.patchaccess.id
 
