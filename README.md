@@ -105,7 +105,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListRolePolicies",
                 "iam:PutRolePolicy"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -126,7 +128,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ssm:RegisterTaskWithMaintenanceWindow",
                 "ssm:UpdateMaintenanceWindow"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
