@@ -1,4 +1,6 @@
 resource "aws_iam_role_policy" "patchaccess" {
+  # checkov:skip=CKV_AWS_288: Policy mirrors AWS managed SSM instance core; broad access required
+  # checkov:skip=CKV_AWS_289: Policy mirrors AWS managed SSM instance core; broad access required
   # checkov:skip=CKV_AWS_290: Policy requires broad access for this module to function
   # checkov:skip=CKV_AWS_355: Policy requires broad access for this module to function
   # checkov:skip=CKV_AWS_272: Policy requires broad access for this module to function
